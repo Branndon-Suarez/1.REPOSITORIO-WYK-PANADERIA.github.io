@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarjetas Flip</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+    }
+
+    .grid-container {
+      display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      padding: 20px
+    }
+
+    .card-container {
+        width: 100%;
+    }
+
+    .card {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(84, 19, 5, 0.536);
+      background: white;
+    }
+
+    .card-front, .card-back {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card-front h2 {
+      font-size: 1.2rem;
+      margin: 0.8rem 0 0.4rem;
+    }
+
+    .card-front p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card-front button,
+    .card-back button {
+      padding: 0.6rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-front button:hover,
+    .card-back button:hover {
+      background-color: #0056b3;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      align-items: center;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+
+    .card-back h3 {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .card-back p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container" id="grid">
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face card-front">
+        <img src="IMAGENES/Mocaccino ☕️.jpg" alt="Imagen de portada">
+        <h2>Título 1</h2>
+        <p>Texto de ejemplo para la parte frontal.</p>
+        <button onclick="this.closest('.card').classList.add('flipped')">Ver más</button>
+      </div>
+      <div class="card-face card-back">
+        <h3>Parte Trasera</h3>
+        <p>Contenido adicional aquí.</p>
+        <button onclick="this.closest('.card').classList.remove('flipped')">Volver</button>
+      </div>
+    </div>
+  </div>
+  <!-- Puedes copiar y pegar más tarjetas aquí -->
+</div>
+</div>
+
+<script>
+  const grid = document.getElementById("grid");
+
+  for (let i = 1; i <= 15; i++) {
+    const cardId = `card-${i}`;
+    const cardContainer = document.createElement("div");
+    cardContainer.className = "card-container";
+
+    cardContainer.innerHTML = `
+      <div class="card" id="${cardId}">
+        <div class="card-face card-front">
+          <img src="https://picsum.photos/300/160?random=${i}" alt="Imagen de portada">
+          <h2>Título ${i}</h2>
+          <p>Texto de ejemplo para la parte frontal de la carta ${i}.</p>
+          <button onclick="document.getElementById('${cardId}').classList.add('flipped')">Ver más</button>
+        </div>
+        <div class="card-face card-back">
+          <h3>Parte Trasera</h3>
+          <p>Información adicional en la parte trasera de la tarjeta ${i}.</p>
+          <button onclick="document.getElementById('${cardId}').classList.remove('flipped')">Volver</button>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(cardContainer);
+  

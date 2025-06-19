@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú de Café</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2e6dc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #5a2d0c;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #3f2b20;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .categorias {
+      margin: 2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .categorias button {
+      background-color: #5a2d0c;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .categorias button:hover {
+      background-color: #8b5e34;
+    }
+
+    .menu-fondo {
+      background-image: url('IMAGENES/descarga (1).jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px 20px;
+      border-radius: 20px;
+    }
+
+    .tarjetas-zona {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      width: 100%;
+      height: 230px;
+      perspective: 1000px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #fffaf6;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .card-front {
+      background-color: #fffaf6;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .card-back {
+      background-color: #f5eee7;
+      transform: rotateY(180deg);
+      text-align: center;
+    }
+
+    .card-back h3 {
+      font-size: 1.1rem;
+      color: #5a2d0c;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-back ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Menú de Bebidas</h1>
+  <p>Descubre nuestra selección de cafés artesanales, frappés y otras delicias calientes y frías, preparadas con ingredientes de alta calidad.</p>
+</header>
+
+<div class="categorias">
+  <button>Cafés</button>
+  <button>Frappés</button>
+  <button>Tés</button>
+  <button>Especiales</button>
+</div>
+
+<div class="menu-fondo">
+  <div class="tarjetas-zona">
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/capuchino.jpg" alt="Capuchino">
+        </div>
+        <div class="card-back">
+          <h3>Capuchino</h3>
+          <ul>
+            <li>☕ Espresso</li>
+            <li>🥛 Leche Vaporizada</li>
+            <li>🌰 Canela</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="IMAGENES/Tres colores.jpg" alt="Tres colores">
+        </div>
+        <div class="card-back">
+          <h3>Latte 3 Colores</h3>
+          <ul>
+            <li>🥛 Leche</li>
+            <li>☕ Café suave</li>
+            <li>🍯 Caramelo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Puedes seguir agregando más tarjetas -->
+
+  </div>
+</div>
+
+</body>
+</html>
