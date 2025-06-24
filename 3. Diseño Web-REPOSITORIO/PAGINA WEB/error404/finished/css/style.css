@@ -1,0 +1,31 @@
+:root{
+    --primary-color: #fcb82f;
+    --secondary-color: #ffffff;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--primary-color);
+}
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1,p{
+    color:var(--secondary-color);
+}
+h1{
+    font-family: 'Fugaz One', cursive;
+    font-size: 50px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin:20px 0px;
+}
