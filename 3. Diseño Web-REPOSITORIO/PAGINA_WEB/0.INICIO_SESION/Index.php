@@ -54,18 +54,17 @@
                                 style="width:50px;height:50px"
                                 id="icon_2-candado">
                             </lord-icon>
-                            <input type="text" name="Cedula_fk" placeholder="Digite su cédula">
+                            <input type="text" name="Cedula_fk" placeholder="Digite su cédula" required>
                         </div>
 
                         <div class="input-field">
-                            <!--<img id="icon_1-candado" src="../IMG/IMAGENES-ICONOS/candado_icon.png">-->
                             <lord-icon
                                 src="https://cdn.lordicon.com/zbbefawl.json"
                                 trigger="hover"
                                 style="width:50px;height:50px"
                                 id="icon_2-candado">
                             </lord-icon>
-                            <input type="password" name="contrasena" placeholder="Digite su contraseña">
+                            <input type="password" name="contrasena" placeholder="Digite su contraseña" required>
                         </div>
                         <button type="submit" name="boton_login" class="btn solid">Iniciar Sesión</button>  
 

@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #5a2d0c;
+    --secondary-color: rgb(158, 92, 31);
+    --tertiary-color: rgb(204, 174, 135);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /*box-sizing: border-box;
+    el relleno (padding) y el borde (border) se incluyen dentro del ancho y alto especificados
+    */
+}
+
+html {
+    height: 100%;
+}
+
+main > h1 {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main > p {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-container > * {
+    background-color: var(--tertiary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    min-height: 100%;
+    gap: 2px; /* Usado en diseños grid y flexbox para controlar el espacio entre las filas y columnas*/
+    grid-template-areas: /*Define y nombra áreas (celdas) en un contenedor grid (body en este caso)*/
+        "header"
+        "nav"
+        "main"
+        "article"
+        "footer";
+    /*Nota: El orden de cada elemento influye en el orden visual del FRONT END*/
+    background-color: var(--secondary-color);
+}
+
+/*Asignamos las áreas a los elementos*/
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+article {
+    grid-area: article;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.sub-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Dos columnas de igual tamaño*/
+    gap: 2px; /*Espacio entre las celdas de la subgrid*/
+    grid-template:
+        "h1" 10%
+        "p" 10%
+        "busqueda img_gato" auto
+        / 40% 60%;
+}
+
+.sub-grid-container > h1 {
+    grid-area: h1;
+}
+
+.sub-grid-container > p {
+    grid-area: p;
+}
+
+.sub-grid-container > img {
+    grid-area: img_gato;
+}
+
+.sub-grid-container > #busqueda {
+    grid-area: busqueda;
+}
+
+.sub-grid-container > #busqueda > .container-fluid > .d-flex >.input-buscar {
+    color: var(--primary-color) !important;
+    border: solid 2px var(--primary-color) !important;
+}
+
+.sub-grid-container > #busqueda > .container-fluid > .d-flex >.input-buscar:hover {
+    color: #fff !important;
+    background-color: var(--primary-color) !important;
+}
+
+.sub-grid-container > #busqueda > .container-fluid > .d-flex >.boton-buscar {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+    border: solid 2px var(--primary-color) !important;
+}
+
+.sub-grid-container > #busqueda > .container-fluid > .d-flex >.boton-buscar:hover {
+    color: var(--tertiary-color) !important;
+    background-color: var(--primary-color) !important;
+}
+
+/*RESPONSIVE PARA MÓVIL*/
+@media (min-width: 0px) and (max-width: 600px) {
+    .grid-container {
+        min-height: 100vh;
+        grid-template:
+            "header" auto
+            "nav" auto
+            "main" 1fr
+            "article" auto
+            "footer" 15%
+            / 100%;
+    }
+
+    .sub-grid-container {
+        grid-template:
+            "h1" 20%
+            "p" 10%
+            "busqueda" 20%
+            "img_gato" 50%
+            / 1fr;
+    }
+
+    .sub-grid-container > h1, p, #busqueda, img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*RESPONSIVE PARA TABLET*/
+@media (min-width: 601px) and (max-width: 900px) {
+    .grid-container {
+        /*FORMA 1: Todo separado
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 100px auto 200px;
+        grid-template-areas:
+        --Cada string representa una fila y cada palabra una celda
+            "header header"
+            "nav nav"
+            "article main"
+            "footer footer";
+        */
+        /*FORMA 2: Todo en una sola, abreviado*/
+        grid-template:
+            "header header" 100px
+            "nav nav" 100px
+            "article main" auto
+            "footer footer" 200px
+            / 200px auto /*Columnas (grid-template-columns)*/;
+    }
+
+    .sub-grid-container {
+        grid-template:
+            "h1" 20%
+            "p" 10%
+            "busqueda" 20%
+            "img_gato" 50%
+            / 1fr;
+    }
+
+    .sub-grid-container > h1, p, #busqueda, img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*RESPONSIVE PARA PC*/
+@media (min-width: 901px) {
+    .grid-container {
+        grid-template:
+            "header header header" 30%
+            "nav main article" auto
+            "footer footer footer" 10% /
+            15% 1fr 15%;
+    }
+
+    .sub-grid-container {
+        grid-template:
+            "h1 h1" auto
+            "p p" auto
+            "busqueda img_gato" 1fr /*Tomar el espacio que queda hanlando de filas*/
+            / 1fr 1fr;
+    }
+    
+    .sub-grid-container > h1, p, #busqueda, img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

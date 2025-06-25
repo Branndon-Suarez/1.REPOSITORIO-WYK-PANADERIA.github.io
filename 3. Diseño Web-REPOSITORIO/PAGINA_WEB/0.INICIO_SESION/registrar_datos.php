@@ -13,10 +13,11 @@
     /*Crea un array vacio para almacenar los mensajes y los muestro un mensaje guardado especifico dependiendo de:
         1. Si existe o no el id del empleado en el sistema.
         2. si está en uso o no el id del empleado para ser usado en como fk en la tabla de usuario empleado.
-        3. Si no está en uso y no se repite procede a mostrar mensaje que se regisro exitosamente.*/
+        3. Si no está en uso y no se repite procede a mostrar mensaje que se registró exitosamente.
+    */
     $mensajes = [];
 
-    //1.Verificar si la cédula existe no en el sistema para poder usada en el registro
+    //1.Verificar si la cédula NO existe en el sistema para poder usada en el registro
     $verificar_existencia_fk = "SELECT * FROM EMPLEADO WHERE Id_Emple = '$id_emple_fk'";
     $resultado_existencia = mysqli_query($conexion, $verificar_existencia_fk);
 
