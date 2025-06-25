@@ -1,0 +1,9 @@
+ErrorDocument 404 /PAGINA_WEB/404.html
+ErrorDocument 500 /PAGINA_WEB/500.html
+
+# Fuerza a Apache a manejar errores PHP como 500
+php_flag display_errors off
+php_value error_reporting 0
+
+# Captura errores de ejecución (E_ERROR, E_PARSE, etc.)
+php_value error_log logs/php_errors.log
