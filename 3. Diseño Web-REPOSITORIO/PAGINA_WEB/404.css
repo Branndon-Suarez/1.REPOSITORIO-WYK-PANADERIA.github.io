@@ -109,7 +109,6 @@ main {
 
 .sub-grid-container>button {
     grid-area: pagina_inicio;
-    color: var(--tertiary-color) !important;
     background-color: var(--primary-color) !important;
     border: solid 3px black !important;
     font-family: 'Georgia', serif !important;
@@ -117,12 +116,21 @@ main {
 }
 
 .sub-grid-container>button:hover {
-    color: var(--primary-color) !important;
     background-color: transparent !important;
     border: solid 3px var(--primary-color) !important;
     box-shadow:  0 8px 30px rgba(86, 43, 11, 0.633);
     font-family: 'Georgia', serif !important;
     font-weight: bold !important;
+}
+
+.sub-grid-container>button>a {
+    color: var(--tertiary-color) !important;
+    text-decoration: none !important;
+}
+
+.sub-grid-container>button:hover a {
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
 }
 
 .sub-grid-container>.p-2 {

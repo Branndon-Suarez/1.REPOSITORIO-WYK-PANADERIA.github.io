@@ -1,7 +1,3 @@
-<?php
-    $obj = new prueba();
-    $obj->conexion();
-?>
 <!DOCTYPE html>
 <html lang="en">
 

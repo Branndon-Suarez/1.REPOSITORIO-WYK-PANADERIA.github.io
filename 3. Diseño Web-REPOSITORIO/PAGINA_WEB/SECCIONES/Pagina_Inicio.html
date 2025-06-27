@@ -13,20 +13,19 @@
   <header class="encabezado">
     <button id="boton-menu" class="boton-icono"><i class="fas fa-bars"></i></button>
     <div class="contenedor-logo">
-      <img src="IMAGENES/LOGO.png" alt="Logo" class="logo">
+      <a href="#inicio-pagina"><img src="IMAGENES/LOGO.png" alt="Logo" class="logo"></a>
     </div>
     <div class="contenedor-busqueda">
       <button id="boton-busqueda" class="boton-icono"><i class="fas fa-search"></i></button>
       <input type="text" id="busqueda" class="input-busqueda oculto" placeholder="Buscar...">
     </div>
     <div class="contenedor-botones">
-      <button class="button">Iniciar sesión</button>
-      <button class="button">Registrarse</button>
+      <a href="/PAGINA_WEB/0.INICIO_SESION/Index.php"><button class="button">Iniciar sesión</button></a>
     </div>
   </header>
 
   <nav class="menu-circular" id="menu-circular">
-    <a href="TARJET.html" class="item"><i class="fas fa-home"></i><span>Inicio</span></a>
+    <a href="TARJETA.html" class="item"><i class="fas fa-home"></i><span>Inicio</span></a>
     <a href="#" class="item"><i class="fas fa-pump-soap"></i><span>Aseo</span></a>
     <a href="#" class="item"><i class="fas fa-box-open"></i><span>Combos</span></a>
     <a href="#" class="item"><i class="fas fa-carrot"></i><span>Víveres</span></a>
@@ -34,7 +33,7 @@
     <a href="#" class="item"><i class="fas fa-birthday-cake"></i><span>Repostería</span></a>
   </nav>
 
-  <main>
+  <main id="inicio-pagina">
     <section class="carrusel-videos">
       <div class="video">
         <video autoplay muted loop class="video-fondo">
@@ -42,16 +41,16 @@
         </video>
         <div class="texto-video">
           <h1>PANADERIA Y CAFETERIA WYK</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-          <button class="boton-leer">Leer más</button>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> -->
+          <!-- <button class="boton-leer">Leer más</button> -->
         </div>
       </div>
     </section>
 
     <aside class="redes-sociales">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="roto.html"><i class="fab fa-facebook"></i></a>
+      <a href="roto.html"><i class="fab fa-instagram"></i></a>
+      <a href="roto.html"><i class="fab fa-twitter"></i></a>
     </aside>
   </main>
 
@@ -268,8 +267,9 @@
   <!-- Formulario y mapa -->
   <section class="seccion-formulario">
     <div class="lado-mapa">
-      <iframe src="https://www.google.com/maps/place/Panaderia+Cafeter%C3%ADa+WYK/@4.621699,-74.1437241,20z/data=!4m15!1m8!3m7!1s0x8e3f9ea3b98eab0d:0x154d1d17d94d7254!2zQ2wuIDI2IFN1ciAjIDczLTc4LCBLZW5uZWR5LCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!3b1!8m2!3d4.621838!4d-74.143699!16s%2Fg%2F11x05l_n45!3m5!1s0x8e3f9ea3ba1f15e1:0x723822705661cdae!8m2!3d4.621774!4d-74.1436537!16s%2Fg%2F1pv09bc0n?entry=ttu&g_ep=EgoyMDI1MDYyMy4wIKXMDSoASAFQAw%3D%3D" frameborder="0"
-        allowfullscreen></iframe>
+      <iframe
+        src="https://www.google.com/maps/place/Panaderia+Cafeter%C3%ADa+WYK/@4.621699,-74.1437241,20z/data=!4m15!1m8!3m7!1s0x8e3f9ea3b98eab0d:0x154d1d17d94d7254!2zQ2wuIDI2IFN1ciAjIDczLTc4LCBLZW5uZWR5LCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!3b1!8m2!3d4.621838!4d-74.143699!16s%2Fg%2F11x05l_n45!3m5!1s0x8e3f9ea3ba1f15e1:0x723822705661cdae!8m2!3d4.621774!4d-74.1436537!16s%2Fg%2F1pv09bc0n?entry=ttu&g_ep=EgoyMDI1MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+        frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="lado-formulario">
       <form>
@@ -288,7 +288,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-col">
-        <img src="IMAGENES/LOGO.png" alt="Logo WYK" class="footer-logo">
+        <a href="#inicio-pagina"><img src="IMAGENES/LOGO.png" alt="Logo WYK" class="footer-logo"></a>
         <h1 class="brand-name">WYK</h1>
         <p class="tagline">
         <h1>"Un pan para cada mesa, un momento para cada familia."</h1>
@@ -327,95 +327,7 @@
     </div>
   </footer>
 
-
-  <script>
-    const botonMenu = document.getElementById('boton-menu');
-    const menuCircular = document.getElementById('menu-circular');
-    const botonBusqueda = document.getElementById('boton-busqueda');
-    const inputBusqueda = document.getElementById('busqueda');
-
-    botonMenu.addEventListener('click', () => {
-      if (menuCircular.style.display === 'flex') {
-        menuCircular.style.display = 'none';
-      } else {
-        menuCircular.style.display = 'flex';
-        posicionarMenuCircular();
-      }
-    });
-
-    botonBusqueda.addEventListener('click', () => {
-      inputBusqueda.classList.toggle('oculto');
-      if (!inputBusqueda.classList.contains('oculto')) {
-        inputBusqueda.style.width = '150px';
-        inputBusqueda.style.opacity = '1';
-      } else {
-        inputBusqueda.style.width = '0';
-        inputBusqueda.style.opacity = '0';
-      }
-    });
-
-    function posicionarMenuCircular() {
-      const items = menuCircular.querySelectorAll('.item');
-      const radio = 220;
-      const anguloInicial = -90;
-      const anguloFinal = 90;
-      const total = items.length;
-
-      items.forEach((item, i) => {
-        const angulo = anguloInicial + (i * (anguloFinal - anguloInicial) / (total - 1));
-        const rad = angulo * (Math.PI / 180);
-        const x = 250 + radio * Math.cos(rad);
-        const y = 250 + radio * Math.sin(rad);
-        item.style.left = `${x}px`;
-        item.style.top = `${y}px`;
-        item.style.transform = 'translate(-50%, -50%)';
-      });
-    }
-
-
-    const seccionNosotros = document.querySelector('.seccion-nosotros');
-    const letras = seccionNosotros.querySelectorAll('.letra');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          letras.forEach(letra => {
-            letra.classList.add('animada');
-          });
-        } else {
-          letras.forEach(letra => {
-            letra.classList.remove('animada');
-          });
-        }
-      });
-    }, {
-      threshold: 0.5 // cuando el 50% de la seccion esta visible
-    });
-
-    const slides = document.querySelectorAll('.slide');
-    let indiceActual = 0;
-
-    function mostrarSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('activo');
-        if (i === index) slide.classList.add('activo');
-      });
-    }
-
-    function moverSlide(direccion) {
-      indiceActual += direccion;
-      if (indiceActual < 0) indiceActual = slides.length - 1;
-      if (indiceActual >= slides.length) indiceActual = 0;
-      mostrarSlide(indiceActual);
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') moverSlide(-1);
-      if (e.key === 'ArrowRight') moverSlide(1);
-    });
-    observer.observe(seccionNosotros);
-
-  </script>
+  <script src="/PAGINA_WEB/SECCIONES/Pagina_Inicio.js"></script>
 
 </body>
 

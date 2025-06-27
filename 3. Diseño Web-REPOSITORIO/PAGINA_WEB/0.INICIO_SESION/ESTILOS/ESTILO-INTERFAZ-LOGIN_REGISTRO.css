@@ -27,7 +27,7 @@ main{
     font-weight: bold;
     border-radius: 20px;
     color: #d2c8c8;
-    background-color: #893048b2;
+    background-color: #341906;
 }
 
 #mensaje-resultado{
@@ -53,7 +53,7 @@ main{
     height: 3.5rem;
     z-index: 100;
     background-color: #0F1D26;
-    border-bottom: 1px solid #A63754;
+    border-bottom: 1px solid #341906;
 }
 
 /*EMPLEADO NO SELECCIONADO*/
@@ -90,7 +90,7 @@ main{
     width: 100%;
     padding: 0.3rem 1rem 0.3rem 0.3rem;
     background-color: #276a7c9b;
-    border-right: 1px solid #A63754;
+    border-right: 1px solid #341906;
 }
 
 #SELECCIONAR-LOGIN-ROL > .empleado-seleccionado > span{
@@ -104,8 +104,8 @@ main{
 }
 
 #SELECCIONAR-LOGIN-ROL > .empleado-seleccionado > .btn.transparent{
-    background-color: #0F1D26;
-    border: 3px solid #A63754;
+    background-color: #341906;
+    border: 2px solid black;
     transform: translateY(2px);/*baja ligeramente el boton*/
     transition: 0.2s;
 }
@@ -169,7 +169,7 @@ main{
 .container {
     position: relative;
     width: 100%;
-    background-color: #0F1D26;
+    background-color: #341906;
     min-height: 100vh;
     overflow: hidden;
   }
@@ -311,7 +311,7 @@ form.sign-in-form {
 /*--------------------------------------------------------------------- 🚀 BOTONES ---------------------------------------------------------------------------*/
 .btn {
   width: 150px;
-  background-color: #A63754;
+  background-color: #592b0b;
   border: none;
   outline: none;
   height: 49px;
@@ -326,8 +326,8 @@ form.sign-in-form {
 }
 
 .btn:hover{
-  background-color: #893048;
-  border: 3px solid #fff;
+  background-color: #341906;
+  border: 2px solid black;
   transform: translateY(2px);
   transition: 0.3s;
 }
@@ -340,13 +340,13 @@ form.sign-in-form {
     height: 41px;
     font-weight: 600;
     font-size: 0.9rem;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.501);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.767);
     transition: 0.2s;
   }
   
 .btn.transparent:hover{
-    background-color: #0F1D26;
-    border: 3px solid #A63754;
+    background-color: #341906;
+    border: 2px solid black;
     transform: translateY(2px);/*baja ligeramente el boton*/
     transition: 0.2s;
 }
@@ -370,7 +370,7 @@ form.sign-in-form {
   top: -10%;
   right: 50%;/*posiciona la esfera*/
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #A63754 0%, #276a7c 100%);
+  background-image: linear-gradient(-45deg, #341906 0%, #ac7045 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;/*se hace una esfera pero se muestra sólo la parte de abajo*/
   z-index: 6;
