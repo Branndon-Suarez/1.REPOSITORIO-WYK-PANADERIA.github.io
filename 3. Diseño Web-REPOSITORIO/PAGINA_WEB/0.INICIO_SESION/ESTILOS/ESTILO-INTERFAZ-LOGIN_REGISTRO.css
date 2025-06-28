@@ -52,7 +52,7 @@ main{
     width: 100%;
     height: 3.5rem;
     z-index: 100;
-    background-color: #0F1D26;
+    background-color: #863d0c;
     border-bottom: 1px solid #341906;
 }
 
@@ -65,7 +65,7 @@ main{
     width: 100%;
     padding: 0.3rem 1rem 0.3rem 0.3rem;
     background-color: rgba(255, 255, 255, 0.256);
-    border-right: 1px solid #A63754;
+    border-right: 1px solid #a65e37;
 }
 
 #SELECCIONAR-LOGIN-ROL > .empleado > span{
@@ -89,7 +89,7 @@ main{
     text-align: center;
     width: 100%;
     padding: 0.3rem 1rem 0.3rem 0.3rem;
-    background-color: #276a7c9b;
+    background-color: #0000009b;
     border-right: 1px solid #341906;
 }
 
@@ -104,8 +104,8 @@ main{
 }
 
 #SELECCIONAR-LOGIN-ROL > .empleado-seleccionado > .btn.transparent{
-    background-color: #341906;
-    border: 2px solid black;
+    background-color: #6e350c;
+    border: 2px solid rgb(0, 0, 0);
     transform: translateY(2px);/*baja ligeramente el boton*/
     transition: 0.2s;
 }
@@ -142,7 +142,7 @@ main{
     text-align: center;
     width: 100%;
     padding: 0.3rem 1rem 0.3rem 0.3rem;
-    background-color: #276a7c9b;
+    background-color: #9e570a9b;
     border-right: 1px solid #A63754;
 }
 
@@ -157,7 +157,7 @@ main{
 }
 
 #SELECCIONAR-LOGIN-ROL > .cliente-seleccionado > .btn.transparent{
-    background-color: #0F1D26;
+    background-color: #b0460d;
     border: 3px solid #A63754;
     transform: translateY(2px);/*baja ligeramente el boton*/
     transition: 0.2s;

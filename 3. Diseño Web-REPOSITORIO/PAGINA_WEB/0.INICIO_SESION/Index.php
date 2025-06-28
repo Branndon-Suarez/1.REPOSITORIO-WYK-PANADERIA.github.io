@@ -41,7 +41,7 @@
             <div class="forms-container">
                 <div class="signin-signup">
 
-                    <form action="control.php" class="sign-in-form" method="post">
+                    <form action="/PAGINA_WEB/DASHBOARD/DASBOARD_1.html" class="sign-in-form" method="post">
 
                         <h2 class="title">Iniciar Sesión</h2>
 
@@ -66,7 +66,7 @@
                             </lord-icon>
                             <input type="password" name="contrasena" placeholder="Digite su contraseña" required>
                         </div>
-                        <button type="submit" name="boton_login" class="btn solid">Iniciar Sesión</button>  
+                        <button type="submit" name="boton_login" class="btn solid">Iniciar Sesión</button>
 
                         <tr>
                             <td colspan="2" align="center"
@@ -79,7 +79,7 @@
 
                     </form>
 
-                    <form action="registrar_datos.php" id="formulario-registrarse" class="sign-up-form" method="post">
+                    <form action="<!-- registrar_datos.php -->" id="formulario-registrarse" class="sign-up-form" method="post">
 
                         <h2 class="title">Registrarse</h2>
                         <div class="input-field">
