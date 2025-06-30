@@ -22,7 +22,7 @@ INSERT INTO CARGO (Nom_Cargo,Estado_Cargo)
 VALUES ('Administrador',1);
 
 SELECT * FROM INSERTAR_CARGO;
-SELECT * FROM CARGO;                                                        
+                                                        
                                                         
 
                                                         
