@@ -32,7 +32,7 @@
 }
 
 :root{
-    --clr:#ffffff; 
+    --clr:#202023; 
 }
 
 html, body{
@@ -112,7 +112,7 @@ input{
 }
 
 .titulo_personalizado{
-    color: #e37209;
+    color: #e11a1a;
 }
 
 .t{
@@ -126,7 +126,7 @@ input{
 
 /*----------------------------------------------- 🚀 BARRA NAVEGACIÓN SUPERIOR ---------------------------------------------- */
 .menu-superior{
-    background-color: #5c270bc6;
+    background-color: #a63755c1;
     border-bottom: 2px solid #0F1D26;
     height: 80px;
     position: fixed;/*QUEDE FIJA E INDEPENDIENTE AL CONTENIDO*/
@@ -217,7 +217,7 @@ input{
     z-index: 100;
     width: 80px;
     height: 100vh;
-    background:#5c270bc6;
+    background:#a63755c1;
     transition: 0.5s;
     padding-left: 10px;
     overflow: scroll;
@@ -346,7 +346,7 @@ input{
     margin-left: 100px;
     width: 30px;
     height: 30px;
-    background: #ac4208c6;
+    background: #5a2727a9;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -504,7 +504,7 @@ select {
 }
 
 .modal-header #encabezado-modal{
-    color: #5c270bc6;
+    color: #A63754;
     background-color: #6e7c80;
 }
 
@@ -627,7 +627,7 @@ select {
 
 #h2_Actualizar{
     color: #A63754;
-    background-color: #917856;
+    background-color: #6e7c80;
     font-size: 32px;
     font-weight: bold;
     text-align: center;
