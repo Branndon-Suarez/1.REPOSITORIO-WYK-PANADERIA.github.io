@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-prueba hjffcghj 02 30/06/2025
-=======
-holaaaaaaaaaaaaa
->>>>>>> Stashed changes
+prueba prueba 1 2 3
