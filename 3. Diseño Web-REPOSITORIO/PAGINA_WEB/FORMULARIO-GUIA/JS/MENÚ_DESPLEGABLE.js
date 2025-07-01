@@ -7,7 +7,7 @@ menuToggle.onclick =function(){
     imagen_logo.classList.toggle('active');
 }
 
-let Menulist = document.querySelectorAll('.Menulist li');
+let Menulist = document.querySelectorAll('.Menulis li');
 function activeLink(){
     Menulist.forEach((item) => 
     item.classList.remove('Color_Desplazar'));

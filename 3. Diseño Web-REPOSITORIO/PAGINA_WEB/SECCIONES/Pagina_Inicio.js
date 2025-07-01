@@ -1,4 +1,5 @@
-const header = document.querySelector('.encabezado');
+/*EFECTO DEL ENCABEZADO AL BAJAR*/
+const header = document.getElementById('ENCABEZADO');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
@@ -17,47 +18,50 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-const botonMenu = document.getElementById('boton-menu');
-const menuCircular = document.getElementById('menu-circular');
-const botonBusqueda = document.getElementById('boton-busqueda');
-const inputBusqueda = document.getElementById('busqueda');
+/*EFECTO DE DESPLEGAR BARRA DE BÚSQUEDA*/
+let botonBusqueda = document.getElementById('boton-busqueda');
+let inputBusqueda = document.getElementById('busqueda');
 
-botonMenu.addEventListener('click', () => {
-    if (menuCircular.style.display === 'flex') {
-        menuCircular.style.display = 'none';
-    } else {
-        menuCircular.style.display = 'flex';
-        posicionarMenuCircular();
+botonBusqueda.onclick = function() {
+    inputBusqueda.classList.toggle('activo');
+    if (inputBusqueda.classList.contains('activo')) {
+        inputBusqueda.focus();
+    }
+};
+
+document.addEventListener('click', function(event) {
+    const isClickInsideSearchContainer = botonBusqueda.contains(event.target) || inputBusqueda.contains(event.target);
+    if (!isClickInsideSearchContainer && inputBusqueda.classList.contains('activo')) {
+        inputBusqueda.classList.remove('activo');
     }
 });
 
-botonBusqueda.addEventListener('click', () => {
-    inputBusqueda.classList.toggle('oculto');
-    if (!inputBusqueda.classList.contains('oculto')) {
-        inputBusqueda.style.width = '150px';
-        inputBusqueda.style.opacity = '1';
+
+/* FUNCIÓN DEL MENÚ DESPLEGABLE */
+let menuToggle = document.getElementById('boton-menu');
+let ENCABEZADO = document.getElementById('ENCABEZADO');
+let sidebar = document.getElementById('menu-pagina-inicio');
+let mainContent = document.getElementById('MAIN');
+
+let Menulist = document.querySelectorAll('.Menulist li');
+function activeLink(){
+    Menulist.forEach((item) => 
+    item.classList.remove('Color_Desplazar'));
+    this.classList.add('Color_Desplazar')
+}
+Menulist.forEach((item) =>
+item.addEventListener('click',activeLink));
+
+menuToggle.onclick = function(){
+    ENCABEZADO.classList.toggle('active');
+    sidebar.classList.toggle('active');
+
+    if (sidebar.classList.contains('active')) {
+        mainContent.style.marginLeft = '200px';
     } else {
-        inputBusqueda.style.width = '0';
-        inputBusqueda.style.opacity = '0';
+        ENCABEZADO.style.marginLeft = '0px';
+        mainContent.style.marginLeft = 'auto';
     }
-});
-
-function posicionarMenuCircular() {
-    const items = menuCircular.querySelectorAll('.item');
-    const radio = 220;
-    const anguloInicial = -90;
-    const anguloFinal = 90;
-    const total = items.length;
-
-    items.forEach((item, i) => {
-        const angulo = anguloInicial + (i * (anguloFinal - anguloInicial) / (total - 1));
-        const rad = angulo * (Math.PI / 180);
-        const x = 250 + radio * Math.cos(rad);
-        const y = 250 + radio * Math.sin(rad);
-        item.style.left = `${x}px`;
-        item.style.top = `${y}px`;
-        item.style.transform = 'translate(-50%, -50%)';
-    });
 }
 
 
@@ -102,3 +106,21 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') moverSlide(1);
 });
 observer.observe(seccionNosotros);
+
+/*function posicionarMenuCircular() {
+    const items = menuCircular.querySelectorAll('.item');
+    const radio = 220;
+    const anguloInicial = -90;
+    const anguloFinal = 90;
+    const total = items.length;
+
+    items.forEach((item, i) => {
+        const angulo = anguloInicial + (i * (anguloFinal - anguloInicial) / (total - 1));
+        const rad = angulo * (Math.PI / 180);
+        const x = 250 + radio * Math.cos(rad);
+        const y = 250 + radio * Math.sin(rad);
+        item.style.left = `${x}px`;
+        item.style.top = `${y}px`;
+        item.style.transform = 'translate(-50%, -50%)';
+    });
+}*/

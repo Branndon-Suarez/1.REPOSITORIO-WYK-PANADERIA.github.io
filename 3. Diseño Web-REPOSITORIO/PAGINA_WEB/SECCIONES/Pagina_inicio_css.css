@@ -11,39 +11,58 @@ html {
 }
 
 body {
+    display: grid;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    grid-template: 
+        "encabezado encabezado" auto
+        "menu-pagina-inicio MAIN" 1fr
+        "FOOTER FOOTER" auto
+        / auto 1fr;
     overflow-x: hidden;
+    background-color: black;
 }
 
-.encabezado {
+#MAIN{
+    grid-area: MAIN;
+    left: 0;
+    margin-left: 0;
+    overflow-x: auto;
+    transition: left 0.5s ease, opacity 0.5s ease;
+}
+
+#MAIN.active {
+    left: 200px;
+}
+
+#ENCABEZADO {
+    grid-area: encabezado;
     display: flex;
     position: fixed;
     justify-content: flex-start;
     padding: 25px 40px;
     min-width: 100%;
     height: auto;
+    transition: left 0.5s ease, opacity 0.5s ease;
     z-index: 2;
 }
 
-.encabezado.active-scrolled {
+#ENCABEZADO.active {
+    left: 200px;
+}
+
+#ENCABEZADO.active-scrolled {
     background: rgba(0, 0, 0, 0.641);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.609);
     transition: 0.3s ease-in-out;
 }
 
-.encabezado.none-scrolled {
+#ENCABEZADO.none-scrolled {
     background: transparent;
     backdrop-filter: none;
     transition: 0.3s ease-in-out;
-}
-
-.boton-icono {
-    background: none;
-    border: 1px solid rgb(199, 152, 76);
-    font-size: 24px;
-    cursor: pointer;
-    color: rgb(255, 251, 251);
-    margin-right: 10px;
 }
 
 .contenedor-logo .logo {
@@ -57,34 +76,45 @@ body {
     margin-left: auto;
 }
 
+.boton-busqueda {
+    /* Asegúrate de que tu botón tenga estilos básicos, si no los tiene ya */
+    padding: 10px;
+    background-color: #f0f0f0; /* Ejemplo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Para el ícono de la lupa */
+}
+
 .input-busqueda {
-    margin-left: 50px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    transition: all 0.3s ease;
-}
 
-/* From Uiverse.io by adamgiebl */
-.input-busqueda input {
-    background-color: #eee;
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    width: 13em;
-    border-radius: 1rem;
-    color: lightcoral;
-    box-shadow: 0 0.4rem #dfd9d9;
-    cursor: pointer;
-}
-
-.input-busqueda input:focus {
-    outline-color: lightcoral;
-}
-
-.oculto {
     width: 0;
     opacity: 0;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+
+    background-color: #eee;
+    font-size: 1rem;
+    color: #512813;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: text;
+}
+
+.input-busqueda.activo {
+    width: 13em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    opacity: 1;
+    transform: translateX(0); /*Posición originall*/
+    margin-left: 20px;
+}
+
+.input-busqueda:focus {
+    border: solid 2px #512813;
 }
 
 .contenedor-botones button {
@@ -99,6 +129,7 @@ body {
 
 /* From Uiverse.io by adamgiebl */
 button {
+    position: relative;
     font-size: 18px;
     display: inline-block;
     outline: 0;
@@ -125,23 +156,119 @@ button:active {
     transform: translateY(0em);
 }
 
+/*---------------------------------------------- 🚀 BARRA NAVEGACIÓN LATERAL ------------------------------------------------*/
+#boton-menu {
+    background: none;
+    border: 1px solid rgb(199, 152, 76);
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(255, 251, 251);
+    margin-right: 10px;
+}
 
-.menu-circular {
+#boton-menu::before{
+    content: '';
     position: absolute;
-    top: 55%;
-    left: -50px;
-    width: 500px;
-    height: 500px;
-    transform: translateY(-50%);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
+    margin-right: 0;
+    transform: translateY(-9px);
+    transition: 0.5s;
+    box-shadow: 0 9px 0 rgb(197, 184, 189);
+}
+
+#boton-menu::after{
+    position: absolute;
+    background: rgb(197, 184, 189);
+    transition: 0.5s;
+}
+
+
+#boton-menu::before{
+    box-shadow: 0 0 0 rgb(197, 184, 189);
+}
+
+#boton-menu::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+#menu-pagina-inicio{
+    position: fixed;
+    left: -200px;
+    z-index: 100;
+    height: 100vh;
+    background-color: #341906d2 ;
+    transition: left 0.5s ease, opacity 0.5s ease;
+    overflow: scroll;
+    /*OCULTAR EL "overflow: scroll" SIN DESHABILITARLO (BARRA DE SUBIR Y BAJAR) EN EL MENÚ */   
+    scrollbar-width: none;
+    opacity: 0;
+}
+
+
+/*PERMITE DESPLAZAR EL MENÚ ACTIVANDO FUNCION DE LA VARIABLE "sibedar" AL FINAL DEL DOC. HTML*/
+#menu-pagina-inicio.active{
+    display: flex;
+    grid-area: menu-pagina-inicio;
+    width: 200px;
+    left: 0;
+    opacity: 1;
+}
+
+#menu-pagina-inicio:not(.active) {
     pointer-events: none;
 }
 
-.menu-circular .item {
+#menu-pagina-inicio ul{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#menu-pagina-inicio ul  li{
+    position: relative;
+    list-style: none;
+}
+
+/*DESPLAZAR CON COLOR*/
+#menu-pagina-inicio ul  li.Color_Desplazar{
+    background: var(--clr);
+    border-top-left-radius: 50px; /*Dar forma circular del contorno*/
+    border-bottom-left-radius: 50px; /*Dar forma circular del contorno*/
+}
+
+#menu-pagina-inicio ul  li.Color_Desplazar::before{
+    content: '';
     position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -20px;
+    right: 0;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0 5px var(--clr);
+    background: transparent;
+}
+
+#menu-pagina-inicio ul  li.Color_Desplazar::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: -20px;
+    right: 0;
+    border-top-right-radius: 20px;
+    box-shadow: 5px -5px 0 5px var(--clr);
+    background: transparent;
+}
+
+#menu-pagina-inicio > ul > li {
+    display: grid;
+    grid-template: 
+     "icono-circulo span" auto
+     /auto;
+}
+
+#menu-pagina-inicio > ul > li > .icono-circulo{
+    grid-area: icono-circulo;
     width: 60px;
     height: 60px;
     background-color: #c873456d;
@@ -157,37 +284,39 @@ button:active {
     pointer-events: auto;
 }
 
-.menu-circular .item i {
-    color: white;
-    font-size: 20px;
-    transition: transform 0.3s ease;
+#menu-pagina-inicio > ul > li > .icono-circulo:hover{
+    background-color: #512813;
 }
 
-.menu-circular .item:hover i {
-    animation: pulse 0.6s ease;
+#menu-pagina-inicio > ul > li > a >span{
+    grid-area: span;
+    display: flex;
+    padding: 20px;
 }
 
-.menu-circular .item span {
+#menu-pagina-inicio > ul > li > a > span:hover{
+    color: #cd6a38;
+}
+
+#menu-pagina-inicio ul li.Color_Desplazar a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*#menu-pagina-inicio ul li.Color_Desplazar .icon::before{
+    content: '';
     position: absolute;
-    left: 70px;
-    white-space: nowrap;
-    background-color: #b9521a6d;
-    color: white;
-    padding: 5px 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+    inset: 5px;
+    width: 60px;
+    background: #EA4961;
+    border-radius: 50px;
+    transition: 0.3s;
 }
 
-.menu-circular .item:hover span {
-    opacity: 1;
-}
+.sidebar ul li.Color_Desplazar:hover .icon::before{
+    background: var(--bg);
 
+/*---------------------------------------------- 🏁 BARRA NAVEGACIÓN LATERAL ------------------------------------------------*/
 .carrusel-videos {
     height: 100vh;
     position: relative;
@@ -234,13 +363,15 @@ button:active {
 }
 
 .redes-sociales {
-    position: absolute;
+    display: flex;
+    position: relative;
+    max-width: 100px;
     top: 40%;
     left: 10%;
-    display: flex;
     flex-direction: column;
     gap: 35px;
     padding: 30px;
+    justify-content: center;
     z-index: 2;
 }
 
@@ -300,14 +431,6 @@ button:active {
     background-size: cover;
     padding: 100px 20px;
 }
-
-.contenido-nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .seccion-nosotros h1 {
     font-size: 3em;
@@ -714,7 +837,9 @@ button:active {
 
 
 /* Pie de página */
-
+#FOOTER{
+    grid-area: FOOTER;
+}
 
 .footer {
     background-image: url(IMAGENES/footer.jpg);

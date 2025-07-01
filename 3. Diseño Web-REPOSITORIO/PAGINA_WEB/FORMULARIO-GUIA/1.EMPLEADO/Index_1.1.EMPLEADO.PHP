@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FORMULARIO CLIENTE</title>
+    <title>FORMULARIO EMPLEAD</title>
     <link rel="stylesheet" type="text/css" href="../ESTILOS/ESTILOS PROYECTO-FORMULARIOS-CSS.CSS">
     <link rel="stylesheet" type="text/css" href="../ESTILOS/ESTILO-INFO-LOGIN.css">
     <!------------------------------ 🚀 CONEXIÓN SIN 📡 BOOTSTRAP CSS ------------------------------->
