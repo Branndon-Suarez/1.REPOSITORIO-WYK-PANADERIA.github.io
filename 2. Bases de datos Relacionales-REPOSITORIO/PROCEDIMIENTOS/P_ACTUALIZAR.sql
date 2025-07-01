@@ -2,7 +2,8 @@ USE PROYECTO_WYK;
 
 														   /*PROCEDIMIENTOS DE ACTUALIZAR*/
                                                         
-														/*👮‍PROCEDIMIENTO ACTUALIZAR CARGO👮‍*/
+														/*👮‍PROCEDIMIENTO ACTUALIZAR CARGO👮‍
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_CARGO
@@ -19,7 +20,8 @@ CALL ACTUALIZAR_CARGO(5,'HOLA',0);
 
 SELECT*FROM CARGO;
 
-														/*👩‍🍳PROCEDIMIENTO ACTUALIZAR EMPLEADO👨‍🍳*/
+														/*👩‍🍳PROCEDIMIENTO ACTUALIZAR EMPLEADO👨‍🍳
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_EMPLEADO
@@ -44,7 +46,8 @@ CALL ACTUALIZAR_EMPLEADO(5,1005005005,'Sebastian Pinto','O+',3015202833,'juanpin
 
 SELECT*FROM EMPLEADO;	
 
-														/*👦PROCEDIMIENTO ACTUALIZAR CLIENTE👦*/	
+														/*👦PROCEDIMIENTO ACTUALIZAR CLIENTE👦
+_____________________________________________________________________________________________________________________________________________________*/	
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_CLIENTE
@@ -69,7 +72,8 @@ CALL ACTUALIZAR_CLIENTE (5,1002001002,'TI','Yerik Hurtado',3132563434,'hurtadoye
 
 SELECT*FROM CLIENTE; 
 
-														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO👸*/  
+														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO👸
+_____________________________________________________________________________________________________________________________________________________*/  
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_USUARIO
@@ -92,7 +96,8 @@ CALL ACTUALIZAR_USUARIO (9,'sebas.cajero','juan040205', NOW(), NOW(), 0);
 
 SELECT*FROM USUARIO;
 
-														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO EMPLEADO👸*/ 
+														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO EMPLEADO👸
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_USUARIO_EMPLEADO
@@ -111,7 +116,8 @@ CALL ACTUALIZAR_USUARIO_EMPLEADO(9,5,'ADMININSTRADOR');
 
 SELECT*FROM USUARIO_EMPLEADO;
 
-														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO CLIENTE👸*/
+														/*🤴PROCEDIMIENTO ACTUALIZAR USUARIO CLIENTE👸
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_USUARIO_CLIENTE
@@ -129,7 +135,8 @@ CALL ACTUALIZAR_USUARIO_CLIENTE(9,1);
 
 SELECT*FROM USUARIO_CLIENTE;
 
-														/*🍰PROCEDIMIENTO ACTUALIZAR PEDIDO🍰*/
+														/*🍰PROCEDIMIENTO ACTUALIZAR PEDIDO🍰
+_____________________________________________________________________________________________________________________________________________________*/
 													
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_PEDIDO
@@ -152,7 +159,8 @@ CALL ACTUALIZAR_PEDIDO( 5, NOW(), 3,5,5, 'CANCELADO');
 
 SELECT*FROM PEDIDO;
 
-														/*🥐PROCEDIMIENTO ACTUALIZAR PRODUCTO🥐*/
+														/*🥐PROCEDIMIENTO ACTUALIZAR PRODUCTO🥐
+_____________________________________________________________________________________________________________________________________________________*/
 									
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_PRODUCTO
@@ -183,7 +191,8 @@ CALL ACTUALIZAR_PRODUCTO(7700055,'PEDIDO CALLDO PARA LA MESA 5',12000,10,30,12,'
 
 SELECT*FROM PRODUCTO;
 
-														/*🚲PROCEDIMIENTO ACTUALIZAR DETALLE PEDIDO🚲*/
+														/*🚲PROCEDIMIENTO ACTUALIZAR DETALLE PEDIDO🚲
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_DETALLE_PEDIDO
@@ -205,7 +214,8 @@ CALL ACTUALIZAR_DETALLE_PEDIDO(5,'PEDIDO CALLDO PARA LA MESA 5',5,7700055,0);
 
 SELECT*FROM DETALLE_PEDIDO;
 
-														/*📄PROCEDIMIENTO ACTUALIZAR FACTURA VENTA📄*/
+														/*📄PROCEDIMIENTO ACTUALIZAR FACTURA VENTA📄
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_FACTURA_VENTA 
@@ -233,7 +243,8 @@ CALL ACTUALIZAR_FACTURA_VENTA (5,12000, NOW(), 'VENTA 1 CALDO', 5,5,5,'CANCELADA
 
 SELECT*FROM FACTURA_VENTA;          
 
-														/*🔖PROCEDIMIENTO ACTUALIZAR DETALLE_VENTA_PRODUCTO🔖*/ 
+														/*🔖PROCEDIMIENTO ACTUALIZAR DETALLE_VENTA_PRODUCTO🔖
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_DETALLE_VENTA_PRODUCTO
@@ -257,7 +268,8 @@ CALL ACTUALIZAR_DETALLE_VENTA_PRODUCTO(5,1,4000,5,7700055,0);
 
 SELECT*FROM DETALLE_VENTA_PRODUCTO;
 
-														/*👩‍💼PROCEDIMIENTO ACTUALIZAR PROVEEDOR👨‍💼*/
+														/*👩‍💼PROCEDIMIENTO ACTUALIZAR PROVEEDOR👨‍💼
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_PROVEEDOR
@@ -281,7 +293,8 @@ CALL ACTUALIZAR_PROVEEDOR(5,800500600,'BRANNDON SUAREZ', 3125687,'si@gmail.com',
 
 SELECT*FROM PROVEEDOR;    
 
-														/*🥣PROCEDIMIENTO ACTUALIZAR MATERIA PRIMA🥣*/                            
+														/*🥣PROCEDIMIENTO ACTUALIZAR MATERIA PRIMA🥣
+_____________________________________________________________________________________________________________________________________________________*/                            
 									
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_MATERIA_PRIMA
@@ -313,7 +326,8 @@ CALL ACTUALIZAR_MATERIA_PRIMA (5,'HARINA', '2026-01-15', 'GRAMOS', 200,500,300,'
 
 SELECT*FROM MATERIA_PRIMA;   
 
-														/*📜PROCEDIMIENTO ACTUALIZAR FACTURA COMPRA📜*/ 
+														/*📜PROCEDIMIENTO ACTUALIZAR FACTURA COMPRA📜
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_FACTURA_COMPRA
@@ -338,7 +352,8 @@ CALL  ACTUALIZAR_FACTURA_COMPRA(9,100000, NOW(), 'COMPRA HARINA', 5, 5 , 'CANCEL
 
 SELECT*FROM FACTURA_COMPRA;
 
-														/*📰PROCEDIMIENTO ACTUALIZAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰*/
+														/*📰PROCEDIMIENTO ACTUALIZAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA
@@ -363,7 +378,8 @@ CALL ACTUALIZAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA(5,300,50000,5,5,0);
 
 SELECT*FROM DETALLE_FACTURA_COMPRA_MATERIA_PRIMA;
 
-														/*🍮PROCEDIMIENTO ACTUALIZAR_DETALLE_COMPRA_PRODUCTO🍮*/
+														/*🍮PROCEDIMIENTO ACTUALIZAR_DETALLE_COMPRA_PRODUCTO🍮
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_DETALLE_COMPRA_PRODUCTO
@@ -387,7 +403,8 @@ CALL ACTUALIZAR_DETALLE_COMPRA_PRODUCTO(5,300,50000,5,7700055,0);
 
 SELECT*FROM DETALLE_COMPRA_PRODUCTO;
 
-														/*🍲PRECEDIMIENTO ACTUALIZAR PRODUCCION🍲*/ 
+														/*🍲PRECEDIMIENTO ACTUALIZAR PRODUCCION🍲
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE ACTUALIZAR_PRODUCCION
