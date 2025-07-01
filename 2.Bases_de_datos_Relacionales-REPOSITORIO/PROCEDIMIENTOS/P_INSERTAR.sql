@@ -2,7 +2,8 @@ USE PROYECTO_WYK;
 
 														   /*PROCEDIMIENTOS DE INSERTAR*/
                                                         
-														/*👮‍PROCEDIMIENTO INSERTAR CARGO👮‍*/
+														/*👮‍PROCEDIMIENTO INSERTAR CARGO👮‍
+____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_CARGO
@@ -19,7 +20,8 @@ CALL INSERTAR_CARGO ('Prueba',1);
 
 SELECT*FROM CARGO;
 
-														/*👩‍🍳PROCEDIMIENTO INSERTAR EMPLEADO👨‍🍳*/
+														/*👩‍🍳PROCEDIMIENTO INSERTAR EMPLEADO👨‍🍳
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_EMPLEADO
@@ -41,7 +43,8 @@ CALL INSERTAR_EMPLEADO (1005005005,'Sebastian Pinto','O+',3015202833,'juanpintow
 
 SELECT*FROM EMPLEADO;
 
-														/*👦PROCEDIMIENTO INSERTAR CLIENTE👦*/
+														/*👦PROCEDIMIENTO INSERTAR CLIENTE👦
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $ 
 CREATE PROCEDURE INSERTAR_CLIENTE
@@ -63,7 +66,8 @@ CALL INSERTAR_CLIENTE(1002001002,'TI','Yerik Hurtado',3132563434,'hurtadoyerik@g
 
 SELECT*FROM CLIENTE;
 
-														/*🤴PROCEDIMIENTO INSERTAR USUARIO👸*/
+														/*🤴PROCEDIMIENTO INSERTAR USUARIO👸
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_USUARIO
@@ -83,7 +87,8 @@ CALL INSERTAR_USUARIO('sebas.cajero','juan040205', NOW(), NOW(), 1);
 
 SELECT*FROM USUARIO;
 
-														/*🤴PROCEDIMIENTO INSERTAR USUARIO EMPLEADO👸*/
+														/*🤴PROCEDIMIENTO INSERTAR USUARIO EMPLEADO👸
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_USUARIO_EMPLEADO
@@ -101,7 +106,8 @@ CALL INSERTAR_USUARIO_EMPLEADO(9,5,'EMPLEADO');
 
 SELECT*FROM USUARIO_EMPLEADO;
 
-														/*🤴PROCEDIMIENTO INSERTAR USUARIO CLIENTE👸*/
+														/*🤴PROCEDIMIENTO INSERTAR USUARIO CLIENTE👸
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_USUARIO_CLIENTE
@@ -118,7 +124,8 @@ CALL INSERTAR_USUARIO_CLIENTE (9,5);
 
 SELECT*FROM USUARIO_CLIENTE;
 
-														/*🍰PROCEDIMIENTO INSERTAR PEDIDO🍰*/
+														/*🍰PROCEDIMIENTO INSERTAR PEDIDO🍰
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_PEDIDO
@@ -138,7 +145,8 @@ CALL INSERTAR_PEDIDO(NOW(), 3,5,5, 'PENDIENTE');
 
 SELECT*FROM PEDIDO;
 
-														/*🥐PROCEDIMIENTO INSERTAR PRODUCTO🥐*/
+														/*🥐PROCEDIMIENTO INSERTAR PRODUCTO🥐
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_PRODUCTO
@@ -167,7 +175,8 @@ CALL INSERTAR_PRODUCTO(7700055,'PEDIDO CALLDO PARA LA MESA 5',12000,10,30,12,'20
 
 SELECT*FROM PRODUCTO;
 
-														/*🚲PROCEDIMIENTO INSERTAR DETALLE PEDIDO🚲*/
+														/*🚲PROCEDIMIENTO INSERTAR DETALLE PEDIDO🚲
+____________________________________________________________________________________________________________________________________________________ */
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_DETALLE_PEDIDO
@@ -187,7 +196,8 @@ CALL INSERTAR_DETALLE_PEDIDO(5,'PEDIDO CALLDO PARA LA MESA 5',5,7700055,1);
 
 SELECT*FROM DETALLE_PEDIDO;
 
-														/*📄PROCEDIMIENTO INSERTAR FACTURA VENTA📄*/
+														/*📄PROCEDIMIENTO INSERTAR FACTURA VENTA📄
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_FACTURA_VENTA
@@ -211,7 +221,8 @@ CALL INSERTAR_FACTURA_VENTA(12000, NOW(), 'VENTA 1 CALDO', 5,5,5,'PAGADA');
 
 SELECT*FROM FACTURA_VENTA;
 
-														/*🔖PROCEDIMIENTO INSERTAR DETALLE_VENTA_PRODUCTO🔖*/
+														/*🔖PROCEDIMIENTO INSERTAR DETALLE_VENTA_PRODUCTO🔖
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_DETALLE_VENTA_PRODUCTO
@@ -234,7 +245,8 @@ CALL INSERTAR_DETALLE_VENTA_PRODUCTO (5,1,4000,5,7700055,1);
 
 SELECT*FROM DETALLE_VENTA_PRODUCTO;
 
-														/*👩‍💼PROCEDIMIENTO INSERTAR PROVEEDOR👨‍💼*/
+														/*👩‍💼PROCEDIMIENTO INSERTAR PROVEEDOR👨‍💼
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_PROVEEDOR
@@ -255,7 +267,8 @@ CALL INSERTAR_PROVEEDOR (800500600,'BRANNDON SUAREZ', 3125687,'si@gmail.com',5,1
 
 SELECT*FROM PROVEEDOR;
 
-														/*🥣PROCEDIMIENTO INSERTAR MATERIA PRIMA🥣*/
+														/*🥣PROCEDIMIENTO INSERTAR MATERIA PRIMA🥣
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_MATERIA_PRIMA
@@ -285,7 +298,8 @@ CALL INSERTAR_MATERIA_PRIMA('HARINA', '2026-01-15', 'GRAMOS', 200,500,300,'HARIN
 
 SELECT*FROM MATERIA_PRIMA;
 
-														/*📜PROCEDIMIENTO INSERTAR FACTURA COMPRA📜*/
+														/*📜PROCEDIMIENTO INSERTAR FACTURA COMPRA📜
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_FACTURA_COMPRA
@@ -308,7 +322,8 @@ CALL INSERTAR_FACTURA_COMPRA(100000, NOW(), 'COMPRA HARINA', 5, 5 , 'PAGADA');
 
 SELECT*FROM FACTURA_COMPRA;
 
-														/*📰PROCEDIMIENTO INSERTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰*/
+														/*📰PROCEDIMIENTO INSERTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA
@@ -331,7 +346,8 @@ CALL INSERTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA(5,300,50000,5,5,1);
 
 SELECT*FROM DETALLE_FACTURA_COMPRA_MATERIA_PRIMA;
 
-														/*🍮PROCEDIMIENTO INSERTAR_DETALLE_COMPRA_PRODUCTO🍮*/
+														/*🍮PROCEDIMIENTO INSERTAR_DETALLE_COMPRA_PRODUCTO🍮
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_DETALLE_COMPRA_PRODUCTO
@@ -354,7 +370,8 @@ CALL INSERTAR_DETALLE_COMPRA_PRODUCTO (5,300,50000,5,7700055,1);
 
 SELECT*FROM DETALLE_COMPRA_PRODUCTO;
 
-														/*🍲PRECEDIMIENTO INSERTAR PRODUCCION🍲*/       
+														/*🍲PRECEDIMIENTO INSERTAR PRODUCCION🍲
+_____________________________________________________________________________________________________________________________________________________*/       
                                                         
 DELIMITER $
 CREATE PROCEDURE INSERTAR_PRODUCCION

@@ -2,7 +2,8 @@ USE PROYECTO_WYK;
 
 														/*PROCEDIMINETOS DE CONSULTAR*/
                                                         
-                                                        /*👮‍PROCEDIMIENTO CONSULTAR CARGO👮‍*/
+                                                        /*👮‍PROCEDIMIENTO CONSULTAR CARGO👮‍
+_____________________________________________________________________________________________________________________________________________________*/
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_CARGO()
 BEGIN
@@ -11,7 +12,8 @@ END	$
 
 CALL CONSULTAR_CARGO();				
 
-														/*👩‍🍳PROCEDIMIENTO CONSULTAR EMPLEADO👨‍🍳*/
+														/*👩‍🍳PROCEDIMIENTO CONSULTAR EMPLEADO👨‍🍳
+_____________________________________________________________________________________________________________________________________________________*/
 
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_EMPLEADO()
@@ -21,7 +23,8 @@ END	$
 
 CALL CONSULTAR_EMPLEADO();	  
 
-														/*👦PROCEDIMIENTO CONSULTAR CLIENTE👦*/                                                      
+														/*👦PROCEDIMIENTO CONSULTAR CLIENTE👦
+_____________________________________________________________________________________________________________________________________________________*/                                                      
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_CLIENTE()
@@ -31,7 +34,8 @@ END	$
 
 CALL CONSULTAR_CLIENTE();	
 
-														/*🤴PROCEDIMIENTO CONSULTAR USUARIO👸*/	
+														/*🤴PROCEDIMIENTO CONSULTAR USUARIO👸
+_____________________________________________________________________________________________________________________________________________________*/	
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_USUARIO()
@@ -41,7 +45,8 @@ END	$
 
 CALL CONSULTAR_USUARIO();	   
 
-														/*🤴PROCEDIMIENTO CONSULTAR USUARIO EMPLEADO👸*/ 
+														/*🤴PROCEDIMIENTO CONSULTAR USUARIO EMPLEADO👸
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_USUARIO_EMPLEADO()
@@ -51,7 +56,8 @@ END	$
 
 CALL CONSULTAR_USUARIO_EMPLEADO();   
 
-														/*🤴PROCEDIMIENTO CONSULTAR USUARIO CLIENTE👸*/
+														/*🤴PROCEDIMIENTO CONSULTAR USUARIO CLIENTE👸
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_USUARIO_CLIENTE()
@@ -61,7 +67,8 @@ END	$
 
 CALL CONSULTAR_USUARIO_CLIENTE();  		
 
-														/*🍰PROCEDIMIENTO CONSULTAR PEDIDO🍰*/	
+														/*🍰PROCEDIMIENTO CONSULTAR PEDIDO🍰
+_____________________________________________________________________________________________________________________________________________________*/	
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_PEDIDO()
@@ -71,7 +78,8 @@ END	$
 
 CALL CONSULTAR_PEDIDO();     
 
-														/*🥐PROCEDIMIENTO CONSULTAR PRODUCTO🥐*/    
+														/*🥐PROCEDIMIENTO CONSULTAR PRODUCTO🥐
+_____________________________________________________________________________________________________________________________________________________*/    
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_PRODUCTO()
@@ -81,7 +89,8 @@ END	$
 
 CALL CONSULTAR_PRODUCTO();   
 
-														/*🚲PROCEDIMIENTO CONSULTAR DETALLE PEDIDO🚲*/
+														/*🚲PROCEDIMIENTO CONSULTAR DETALLE PEDIDO🚲
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_DETALLE_PEDIDO()
@@ -91,7 +100,8 @@ END	$
 
 CALL CONSULTAR_DETALLE_PEDIDO();   
 
-														/*📄PROCEDIMIENTO CONSULTAR FACTURA VENTA📄*/   
+														/*📄PROCEDIMIENTO CONSULTAR FACTURA VENTA📄
+_____________________________________________________________________________________________________________________________________________________*/   
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_FACTURA_VENTA()
@@ -101,7 +111,8 @@ END	$
 
 CALL CONSULTAR_FACTURA_VENTA();   
 
-														/*🔖PROCEDIMIENTO CONSULTAR DETALLE_VENTA_PRODUCTO🔖*/
+														/*🔖PROCEDIMIENTO CONSULTAR DETALLE_VENTA_PRODUCTO🔖
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_DETALLE_VENTA_PRODUCTO()
@@ -111,7 +122,8 @@ END	$
 
 CALL CONSULTAR_DETALLE_VENTA_PRODUCTO();
 
-														/*👩‍💼PROCEDIMIENTO CONSULTAR PROVEEDOR👨‍💼*/
+														/*👩‍💼PROCEDIMIENTO CONSULTAR PROVEEDOR👨‍💼
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_PROVEEDOR()
@@ -121,7 +133,8 @@ END	$
 
 CALL CONSULTAR_PROVEEDOR();		
 
-														/*🥣PROCEDIMIENTO CONSULTAR MATERIA PRIMA🥣*/
+														/*🥣PROCEDIMIENTO CONSULTAR MATERIA PRIMA🥣
+_____________________________________________________________________________________________________________________________________________________*/
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_MATERIA_PRIMA()
@@ -131,7 +144,8 @@ END	$
 
 CALL CONSULTAR_MATERIA_PRIMA();	   
 
-														/*📜PROCEDIMIENTO CONSULTAR FACTURA COMPRA📜*/ 
+														/*📜PROCEDIMIENTO CONSULTAR FACTURA COMPRA📜
+_____________________________________________________________________________________________________________________________________________________*/ 
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_FACTURA_COMPRA()
@@ -141,7 +155,8 @@ END	$
 
 CALL CONSULTAR_FACTURA_COMPRA();	 
 
-														/*📰PROCEDIMIENTO CONSULTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰*/  
+														/*📰PROCEDIMIENTO CONSULTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA📰
+_____________________________________________________________________________________________________________________________________________________*/  
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA()
@@ -151,7 +166,8 @@ END	$
 
 CALL CONSULTAR_DETALLE_FACTURA_COMPRA_MATERIA_PRIMA(); 
 
-														/*🍮PROCEDIMIENTO CONSULTAR_DETALLE_COMPRA_PRODUCTO🍮*/    
+														/*🍮PROCEDIMIENTO CONSULTAR_DETALLE_COMPRA_PRODUCTO🍮
+_____________________________________________________________________________________________________________________________________________________*/    
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_DETALLE_COMPRA_PRODUCTO()
@@ -161,7 +177,8 @@ END	$
 
 CALL CONSULTAR_DETALLE_COMPRA_PRODUCTO();  
 
-														/*🍲PRECEDIMIENTO CONSULTAR PRODUCCION🍲*/  
+														/*🍲PRECEDIMIENTO CONSULTAR PRODUCCION🍲
+_____________________________________________________________________________________________________________________________________________________*/  
                                                         
 DELIMITER $
 CREATE PROCEDURE CONSULTAR_PRODUCCION()
