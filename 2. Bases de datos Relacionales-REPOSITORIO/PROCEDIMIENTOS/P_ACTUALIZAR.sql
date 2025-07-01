@@ -1,0 +1,25 @@
+USE PROYECTO_WYK;
+
+														   /*PROCEDIMIENTOS DE ACTUALIZAR*/
+                                                        
+														/*👮‍PROCEDIMIENTO ACTUALIZAR CARGO👮‍*/
+                                                        
+DELIMITER $
+CREATE PROCEDURE ACTUALIZAR_CARGO
+(IN P_A_ID_CARGO INT,
+IN P_A_NOMBRE_CARGO VARCHAR(50),
+IN P_A_ESTADO_CARGO BOOLEAN)
+BEGIN
+UPDATE CARGO
+SET NOMBRE_CARGO=P_A_NOMBRE_CARGO,ESTADO_CARGO=P_A_ESTADO_CARGO
+WHERE ID_CARGO=P_A_ID_CARGO;
+END$
+
+CALL ACTUALIZAR_CARGO(5,'HOLA',0);
+
+SELECT*FROM CARGO;
+
+
+			
+
+									
